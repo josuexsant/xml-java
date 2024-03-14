@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<libro>
+<libro titulo ="Mi libro">
     <autores>
         <autor apellido="Poe" nombre="Edgar Allan"/>
         <autor apellido="Garcia Marquez" nombre="Gabriel"/>
