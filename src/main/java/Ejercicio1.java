@@ -51,10 +51,7 @@ public class Ejercicio1 extends DefaultHandler {
                 System.out.println(titulo);
             case "parrado":
                 enParrafo = true;
-
-
         }
-
     }
 
     @Override
