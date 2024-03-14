@@ -7,7 +7,8 @@
     <secciones>
         <seccion titulo="Seccion 1">
             <capitulo titulo="Capitulo 1">
-                <parrafo>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
+                <parrafo>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
                     libero, et eleifend augue viverra vitae. Aliquam pulvinar libero id ultricies
                     bibendum. Aenean malesuada pretium imperdiet. Ut nunc sapien, aliquet in
                     suscipit varius, suscipit ac ligula. Nam efficitur magna in metus commodo, ut
@@ -22,7 +23,8 @@
         </seccion>
         <seccion titulo="Seccion 2">
             <capitulo titulo="Capitulo 1">
-                <parrafo>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
+                <parrafo>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
                     libero, et eleifend augue viverra vitae. Aliquam pulvinar libero id ultricies
                     bibendum. Aenean malesuada pretium imperdiet. Ut nunc sapien, aliquet in
                     suscipit varius, suscipit ac ligula. Nam efficitur magna in metus commodo, ut
@@ -35,7 +37,8 @@
                 </parrafo>
             </capitulo>
             <capitulo titulo="Capitulo 2">
-                <parrafo>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
+                <parrafo>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
                     libero, et eleifend augue viverra vitae. Aliquam pulvinar libero id ultricies
                     bibendum. Aenean malesuada pretium imperdiet. Ut nunc sapien, aliquet in
                     suscipit varius, suscipit ac ligula. Nam efficitur magna in metus commodo, ut

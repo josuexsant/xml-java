@@ -164,7 +164,7 @@ public class Ejercicio2 implements ContentHandler {
      * @see #startElement
      */
     @Override
-    public void startPrefixMapping(String prefix, String uri) throws SAXException {
+    public void startPrefixMapping  (String prefix, String uri) throws SAXException {
 
     }
 
