@@ -5,10 +5,9 @@
         <autor apellido="Garcia Marquez" nombre="Gabriel"/>
     </autores>
     <secciones>
-        <seccion titulo="lenguajes"/>
-        <seccion titulo="idiomas">
-            <capitulo titulo="español">
-                <parrafo>Hola</parrafo>
+        <seccion titulo="jjjjh">
+            <capitulo titulo="jjjjh">
+                <parrafo>jjjjh</parrafo>
             </capitulo>
         </seccion>
     </secciones>

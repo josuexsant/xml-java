@@ -22,20 +22,32 @@ public class Ventana extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String seleccion = (String) comboBox.getSelectedItem();
 
-                switch (seleccion){
+                switch (seleccion) {
                     case "Seccion":
                         libro.agregarSeccion(textFieldEditable.getText());
+                        System.out.println("Visualizacion: ------------------------------------------------------\n");
+                        System.out.println(libro.visualizarLibro());
                         break;
                     case "Capitulo":
-                        libro.agregarCapitulo((String) comboBoxSeccion.getSelectedItem(), textFieldEditable.getText());
+                        if (libro.getSecciones().isEmpty()) {
+                            JOptionPane.showConfirmDialog(null, "No hay secciones", "WARNING_MESSAGE", JOptionPane.WARNING_MESSAGE);
+                        } else {
+                            libro.agregarCapitulo((String) comboBoxSeccion.getSelectedItem(), textFieldEditable.getText());
+                            System.out.println("Visualizacion: ------------------------------------------------------\n");
+                            System.out.println(libro.visualizarLibro());
+                        }
                         break;
                     case "Parrafo":
-                        libro.agregarParrafo((String) comboBoxCapitulos.getSelectedItem(), textFieldEditable.getText());
+                        if (libro.getSecciones().isEmpty() || comboBoxCapitulos.getSelectedItem() == null) {
+                            JOptionPane.showConfirmDialog(null, "No hay secciones o capitulos", "WARNING_MESSAGE", JOptionPane.WARNING_MESSAGE);
+                        } else {
+                            libro.agregarParrafo((String) comboBoxCapitulos.getSelectedItem(), textFieldEditable.getText());
+                            System.out.println("Visualizacion: ------------------------------------------------------\n");
+                            System.out.println(libro.visualizarLibro());
+                        }
                         break;
                 }
                 llenarSecciones();
-
-                System.out.println(libro.visualizarLibro());
             }
         });
 
@@ -60,7 +72,7 @@ public class Ventana extends JFrame {
         LinkedList<Seccion> secciones = (LinkedList<Seccion>) libro.getSecciones();
         Seccion seccionSeleccionada = null;
         for (Seccion seccion : secciones) {
-            if (seccion.getTitulo().equals(comboBoxSeccion.getSelectedItem())){
+            if (seccion.getTitulo().equals(comboBoxSeccion.getSelectedItem())) {
                 seccionSeleccionada = seccion;
             }
         }
