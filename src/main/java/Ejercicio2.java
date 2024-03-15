@@ -303,7 +303,7 @@ public class Ejercicio2 implements ContentHandler {
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if (qName.equalsIgnoreCase("parrafo")) {
             enParrafo = false;
-            System.out.println("Texto: " + texto.toString());
+            System.out.println("Texto: " + texto.toString().trim());
         }
     }
 
