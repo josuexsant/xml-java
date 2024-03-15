@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libro titulo="Mi libro">
+    <autores>
+        <autor apellido="Poe" nombre="Edgar Allan"/>
+        <autor apellido="Garcia Marquez" nombre="Gabriel"/>
+    </autores>
+    <secciones>
+        <seccion titulo="lenguajes"/>
+        <seccion titulo="idiomas">
+            <capitulo titulo="español">
+                <parrafo>Hola</parrafo>
+            </capitulo>
+        </seccion>
+    </secciones>
+</libro>
