@@ -12,6 +12,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -106,26 +108,20 @@ public class Libro {
             StringWriter writer = new StringWriter();
             transformer.transform(new DOMSource(doc), new StreamResult(writer));
             xml = writer.toString();
+            FileWriter fileWriter = new FileWriter("src/main/xml/xml-creado.xml");
+            transformer.transform(new DOMSource(doc), new StreamResult(fileWriter));
+            fileWriter.close();
 
         } catch (ParserConfigurationException | TransformerException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
         return xml;
     }
 
 
     public static void main(String[] args) {
-
-        Libro miLibro = new Libro("Mi libro");
-        miLibro.agregarSeccion("Seccion 1");
-        miLibro.agregarCapitulo("Seccion 1", "Capitulo 1");
-        miLibro.agregarParrafo("Capitulo 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        miLibro.agregarSeccion("Seccion 2");
-        miLibro.agregarCapitulo("Seccion 2", "Capitulo 1");
-        miLibro.agregarParrafo("Capitulo 1", "Sed accumsan urna libero, et eleifend augue viverra vitae.");
-        miLibro.agregarSeccion("Seccion 3");
-        miLibro.visualizarLibro();
-
         Ventana ventana = new Ventana();
         ventana.mostrarInterfaz();
     }
