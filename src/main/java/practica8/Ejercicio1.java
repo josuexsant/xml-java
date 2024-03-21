@@ -1,8 +1,8 @@
+package practica8;
+
 import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.Attributes;
-import org.xml.sax.helpers.XMLReaderFactory;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -13,7 +13,7 @@ public class Ejercicio1 extends DefaultHandler {
 
     public static void main(String[] args) {
         try {
-            File inputFile = new File("src/main/xml/libro.xml");
+            File inputFile = new File("src/main/xml/libro1.xml");
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
             Ejercicio1 handler = new Ejercicio1();

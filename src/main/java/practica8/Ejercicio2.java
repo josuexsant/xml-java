@@ -1,3 +1,5 @@
+package practica8;
+
 import org.xml.sax.*;
 import org.xml.sax.helpers.AttributesImpl;
 import org.xml.sax.helpers.XMLFilterImpl;
@@ -17,14 +19,14 @@ public class Ejercicio2 implements ContentHandler {
         try {
             XMLReader xmlReader = XMLReaderFactory.createXMLReader();
             xmlReader.setContentHandler(handler);
-            xmlReader.parse(new InputSource(new FileReader("src/main/xml/libro.xml")));
+            xmlReader.parse(new InputSource(new FileReader("src/main/xml/libro1.xml")));
 
             // Creamos el filtro para convertir los textos a mayúsculas
             ContentHandler filtroMayusculas = new FiltroMayusculas(new OutputStreamWriter(System.out));
 
             // Utilizamos SAX para parsear el documento XML y aplicar el filtro
             xmlReader.setContentHandler(filtroMayusculas);
-            xmlReader.parse(new InputSource(new FileReader("src/main/xml/libro.xml")));
+            xmlReader.parse(new InputSource(new FileReader("src/main/xml/libro1.xml")));
         } catch (SAXException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {

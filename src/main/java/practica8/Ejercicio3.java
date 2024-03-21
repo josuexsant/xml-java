@@ -1,3 +1,5 @@
+package practica8;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -9,7 +11,7 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         try {
             // Cargar el documento XML
-            File xmlFile = new File("src/main/xml/libro.xml");
+            File xmlFile = new File("src/main/xml/libro1.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();

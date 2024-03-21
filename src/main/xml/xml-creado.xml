@@ -5,10 +5,6 @@
         <autor apellido="Garcia Marquez" nombre="Gabriel"/>
     </autores>
     <secciones>
-        <seccion titulo="jjjjh">
-            <capitulo titulo="jjjjh">
-                <parrafo>jjjjh</parrafo>
-            </capitulo>
-        </seccion>
+        <seccion titulo="parte 1"/>
     </secciones>
 </libro>
