@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<libro titulo ="Mi libro">
+    <autores>
+        <autor apellido="Poe" nombre="Edgar Allan"/>
+        <autor apellido="Garcia Marquez" nombre="Gabriel"/>
+    </autores>
+    <secciones>
+        <seccion titulo="Seccion 1">
+            <capitulo titulo="Capitulo 1">
+                <parrafo>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
+                    libero, et eleifend augue viverra vitae. Aliquam pulvinar libero id ultricies
+                    bibendum. Aenean malesuada pretium imperdiet. Ut nunc sapien, aliquet in
+                    suscipit varius, suscipit ac ligula. Nam efficitur magna in metus commodo, ut
+                    hendrerit dolor ultrices. Vestibulum posuere felis feugiat elit maximus feugiat.
+                    Nam purus orci, pharetra quis urna et, lobortis maximus libero. Nam pulvinar
+                    dignissim ex, eget porttitor nisl tristique quis. Vivamus eget mauris sed ipsum
+                    fringilla suscipit nec non sapien. In egestas ex libero, in aliquam magna
+                    iaculis vel. Pellentesque varius odio sit amet felis gravida, quis viverra ante
+                    egestas.
+                </parrafo>
+            </capitulo>
+        </seccion>
+        <seccion titulo="Seccion 2">
+            <capitulo titulo="Capitulo 1">
+                <parrafo>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
+                    libero, et eleifend augue viverra vitae. Aliquam pulvinar libero id ultricies
+                    bibendum. Aenean malesuada pretium imperdiet. Ut nunc sapien, aliquet in
+                    suscipit varius, suscipit ac ligula. Nam efficitur magna in metus commodo, ut
+                    hendrerit dolor ultrices. Vestibulum posuere felis feugiat elit maximus feugiat.
+                    Nam purus orci, pharetra quis urna et, lobortis maximus libero. Nam pulvinar
+                    dignissim ex, eget porttitor nisl tristique quis. Vivamus eget mauris sed ipsum
+                    fringilla suscipit nec non sapien. In egestas ex libero, in aliquam magna
+                    iaculis vel. Pellentesque varius odio sit amet felis gravida, quis viverra ante
+                    egestas.
+                </parrafo>
+            </capitulo>
+            <capitulo titulo="Capitulo 2">
+                <parrafo>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan urna
+                    libero, et eleifend augue viverra vitae. Aliquam pulvinar libero id ultricies
+                    bibendum. Aenean malesuada pretium imperdiet. Ut nunc sapien, aliquet in
+                    suscipit varius, suscipit ac ligula. Nam efficitur magna in metus commodo, ut
+                    hendrerit dolor ultrices. Vestibulum posuere felis feugiat elit maximus feugiat.
+                    Nam purus orci, pharetra quis urna et, lobortis maximus libero. Nam pulvinar
+                    dignissim ex, eget porttitor nisl tristique quis. Vivamus eget mauris sed ipsum
+                    fringilla suscipit nec non sapien. In egestas ex libero, in aliquam magna
+                    iaculis vel. Pellentesque varius odio sit amet felis gravida, quis viverra ante
+                    egestas.
+                </parrafo>
+            </capitulo>
+        </seccion>
+    </secciones>
+</libro>
