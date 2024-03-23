@@ -1,7 +1,5 @@
 package tarea4;
 
-import practica8.Ventana;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,9 +11,8 @@ public class Explorador extends JFrame {
     private JLabel label;
     private JButton visualizarButton;
 
-    public Explorador(){
+    public Explorador() {
         setComboBox1();
-
 
         visualizarButton.addActionListener(new ActionListener() {
             @Override
@@ -26,10 +23,10 @@ public class Explorador extends JFrame {
         });
     }
 
-    public void setComboBox1(){
+    public void setComboBox1() {
         Biblioteca biblioteca = new Biblioteca();
         LinkedList<String> libros = biblioteca.getLibros();
-        for (String libro:libros){
+        for (String libro : libros) {
             comboBox1.addItem(libro);
         }
     }

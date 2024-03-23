@@ -99,7 +99,6 @@ public class Libro {
             }
             rootElement.appendChild(seccionesElement);
 
-            // Transformar el documento XML a texto
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -109,11 +108,8 @@ public class Libro {
             FileWriter fileWriter = new FileWriter("src/main/xml/xml-creado.xml");
             transformer.transform(new DOMSource(doc), new StreamResult(fileWriter));
             fileWriter.close();
-
-        } catch (ParserConfigurationException | TransformerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (ParserConfigurationException | TransformerException | IOException e) {
+            System.out.println(e.getMessage());
         }
         return xml;
     }

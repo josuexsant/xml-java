@@ -11,7 +11,7 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         try {
             // Cargar el documento XML
-            File xmlFile = new File("src/main/xml/libro1.xml");
+            File xmlFile = new File("src/main/xml/100_anios_de_soledad.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
