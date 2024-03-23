@@ -19,6 +19,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+/**
+ * Ejercicio 1
+ *
+ * @author Josue Santamaria
+ */
+
 public class Biblioteca {
     static Document documento;
 
@@ -26,18 +32,25 @@ public class Biblioteca {
         Biblioteca biblioteca = new Biblioteca();
         try {
             documento = biblioteca.crearBiblio();
-            biblioteca.mostrar(documento);
             biblioteca.imprimir(documento);
+            biblioteca.guardar(documento);
             Explorador explorador = new Explorador();
             explorador.mostrarInterfaz();
         } catch (ParserConfigurationException | SAXException | IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
+    /**
+     * Este metodo nos ayuda a crear un objeto de tipo Docuemnt que va a contener el XML que vamos a crear
+     * el XML se llenara con un directorio de ficheros que son los archivos XML que hay disponibles en la
+     * biblioteca, cada libro se convertira en un elemento del XML resultante
+     *
+     * @return Se retorna un objeto de tipo Document con el que se van a realizar las operacionens
+     */
     public Document crearBiblio() throws ParserConfigurationException, SAXException, IOException {
         File dir = new File("src/main/libros");
-        String[] archivos = dir.list();
+        String[] files = dir.list();
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -46,16 +59,21 @@ public class Biblioteca {
         Element raiz = documento.createElement("biblio");
         documento.appendChild(raiz);
 
-        for (String archivo : archivos) {
-            Element libro = documento.createElement("libro");
-            libro.setAttribute("titulo", archivo);
-            raiz.appendChild(libro);
+        if (!(files == null)) {
+            for (String file : files) {
+                Element libro = documento.createElement("libro");
+                libro.setAttribute("titulo", file);
+                raiz.appendChild(libro);
+            }
         }
-
         return documento;
     }
 
-    public void mostrar(Document documento) {
+    /**
+     * Es metodo imprime en consola un doucmento XML formateado,
+     * @param documento
+     */
+    public void imprimir(Document documento) {
         try {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
@@ -65,23 +83,22 @@ public class Biblioteca {
             String xml = writer.toString();
             System.out.println(xml);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
-    public void imprimir(Document documento){
+    public void guardar(Document documento) {
         try {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             StringWriter writer = new StringWriter();
             transformer.transform(new DOMSource(documento), new StreamResult(writer));
-            String xml = writer.toString();
             FileWriter fileWriter = new FileWriter("src/main/xml/biblioteca.xml");
             transformer.transform(new DOMSource(documento), new StreamResult(fileWriter));
             fileWriter.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -102,10 +119,10 @@ public class Biblioteca {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document documento = builder.parse(archivo);
-            System.out.println("Visualización "+titulo +" --------------------------------");
-            mostrar(documento);
+            System.out.println("Visualización " + titulo + " --------------------------------");
+            imprimir(documento);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println();
         }
     }
 }

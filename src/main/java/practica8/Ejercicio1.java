@@ -13,7 +13,7 @@ public class Ejercicio1 extends DefaultHandler {
 
     public static void main(String[] args) {
         try {
-            File inputFile = new File("src/main/xml/libro1.xml");
+            File inputFile = new File("src/main/xml/100_anios_de_soledad.xml");
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
             Ejercicio1 handler = new Ejercicio1();
